@@ -11,7 +11,7 @@
                     Console.Write("請輸入運算子：(+, -, *, /) ：");
                     char opr = Console.ReadKey().KeyChar;
                     Console.WriteLine();
-                    ISimpleCaculate caculator = SimpleFactory.CreateCaculator(opr);
+                    ISimpleCaculate caculator = SimpleCaculateFactory.CreateCaculator(opr);
                     caculator.InputOperandsAndCheck();
                     caculator.Caculate();
                     caculator.Output();
@@ -39,7 +39,7 @@
     /// <summary>
     /// 簡單工廠類別
     /// </summary>
-    public class SimpleFactory
+    public class SimpleCaculateFactory
     {
         /// <summary>
         /// 以靜態方法產生運算器
